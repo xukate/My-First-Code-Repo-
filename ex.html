@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+	<head>
+	  <link rel="stylesheet" href="calculator.css">
+	</head>
+<body>
+	<h1>The 215 Calculator</h1>
+	
+	<h1 id="IdTotal">Total: 0</h1>  
+	  
+	<input type="number" id="IdInputNumber" value="1">
+	
+	<button type="button" onclick="add();">Add</button>  
+	<button type="button" onclick="subtract();">Subtract</button>  
+	<button type="button" onclick="multiply();">Multiply</button>    
+	<button type="button" onclick="divide();">Divide</button>  
+
+</body>
+
+<script>
+ /*Please modify the following code to allow floating point numbers.*/
+ /* Display the total with 2  decimals */
+let total = 0;   //define a global variable
+
+function updateTotal()
+{
+  document.getElementById("IdTotal").innerHTML = "Total: " + total.toFixed(2);
+}
+
+function add()
+{
+  let numberAsText = document.getElementById("IdInputNumber").value;
+  let number = parseFloat(numberAsText);
+  total = total + number;
+  updateTotal();
+}
+
+function subtract()
+{
+  let numberAsText = document.getElementById("IdInputNumber").value;
+  let number = parseFloat(numberAsText);
+  total = total - number;
+  updateTotal();
+}
+
+function multiply()
+{
+  let numberAsText = document.getElementById("IdInputNumber").value;
+  let number = parseFloat(numberAsText);
+  total = total * number;
+  updateTotal();
+}
+
+function divide()
+{
+  let numberAsText = document.getElementById("IdInputNumber").value;
+  let number = parseFloat(numberAsText);
+  total = total / number;
+  updateTotal();
+}
+
+</script>
+
+</html>
